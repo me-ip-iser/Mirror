@@ -1,7 +1,7 @@
-let video = document.getElementById("mir")
 navigator.mediaDevices.getUserMedia({
     audio:false,
-    video:true
+    video:true,
 }).then (stream => {
+    let video = document.getElementById("mir")
     video.srcObject = stream;  
-}).catch(eror);
+})
